@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 0;
+  height: 100vh;
+
+  input[type='file'] {
+    display: none;
+  }
+}
+.wrapper-avatar {
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+  .avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+  }
+}
+.wrapper-icon {
+  position: relative;
+  left: 85px;
+  top: -30px;
+
+  background-color: grey;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .icon-camera {
+    margin-left: 5px;
+  }
+}
+
+.form-group {
+  display: flex;
+  width: 300px;
+}
+.label {
+  min-width: 100px;
+  font-weight: 600;
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+}
+.radio {
+  margin: 5px 12px;
+}
+.calendar {
+  padding: 0 12px;
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+}
+
+.view-spinner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}

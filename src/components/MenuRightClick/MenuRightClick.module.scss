@@ -1,0 +1,43 @@
+.wrapper {
+  background-color: #34224f;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.header {
+  display: flex;
+  padding: 5px 15px;
+
+  .image {
+    width: 50px;
+    height: 50px;
+  }
+  .name {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .artists {
+    margin-left: 10px;
+    font-size: 14px;
+    color: grey;
+  }
+}
+.item {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#34224f, 10%);
+  }
+}
+.icon {
+  font-size: 20px;
+  margin: 5px 0;
+  margin-right: 10px;
+}
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}

@@ -1,0 +1,147 @@
+.wrapper {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+
+  background-color: #130c1c;
+  box-shadow: 0 5px 20px 10px #2a1841;
+  width: 100%;
+  height: 90px;
+  padding: 0 20px;
+
+  .media {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 90px;
+
+    .media-left {
+      .image {
+        width: 64px;
+        height: 64px;
+        margin-right: 10px;
+      }
+    }
+    .media-content {
+      .music-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+      }
+      .singer-name {
+        font-size: 12px;
+        color: #ffffff80;
+      }
+    }
+    .media-right {
+      display: flex;
+      justify-content: space-around;
+      width: 60px;
+      padding: 0 20px;
+      .icon-heart {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .right-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 25%;
+
+    .wrapper-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .icon-action {
+        width: 30px;
+        cursor: pointer;
+      }
+      .volume {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 7rem;
+
+        .icon-volume {
+          width: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.volume-range {
+  display: flex;
+  height: 3px;
+  width: 5rem;
+  background-color: rgba(119, 119, 119, 0.781);
+  border-radius: 10px;
+  cursor: pointer;
+
+  .volume-current {
+    height: 100%;
+    width: 0;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    height: 5px;
+
+    .circle {
+      height: 10px;
+      width: 10px;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: -2px;
+      margin-left: -2px;
+    }
+  }
+}
+
+// Mobile: width < 740px
+@media only screen and (max-width: 739px) {
+  .image {
+    display: none;
+  }
+  .icon-heart {
+    margin-left: -40px;
+  }
+  .music-name {
+    width: 80px;
+  }
+  .icon-action {
+    margin-right: -25px;
+  }
+  @media only screen and (max-width: 499px) {
+    .icon-action {
+      display: none;
+    }
+  }
+
+  .volume {
+    padding-left: 30px;
+  }
+}
+//Middle Mobile and Tablet
+
+// Tablet: width >= 740px && < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  .music-name {
+    width: 80px;
+  }
+}
+// PC: width >= 1024px
+@media only screen and (min-width: 1024px) {
+}

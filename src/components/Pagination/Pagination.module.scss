@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px 30px;
+
+  .wrapper-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .icon-more {
+      margin: 0 10px;
+    }
+  }
+  .page-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 40px;
+    background-color: inherit;
+    border: 1px solid #2a213a;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten(#2a213a, 10%);
+    }
+    &:active {
+      background-color: lighten(#2a213a, 20%);
+    }
+  }
+  .page-choose {
+    @extend .page-button;
+    background-color: lighten(#2a213a, 20%);
+  }
+  .page-text {
+    color: white;
+  }
+}

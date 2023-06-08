@@ -1,0 +1,47 @@
+.wrapper {
+  width: 15%;
+  min-height: 600px;
+  background-color: #2a213a;
+}
+@mixin nav-item {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  .nav-item-title {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+  &:active {
+    background-color: lighten(#2a213a, 15%);
+  }
+}
+.nav-item-normal {
+  @include nav-item();
+}
+.nav-item-active {
+  @include nav-item();
+  background-color: lighten(#2a213a, 15%);
+}
+
+// Mobile: width < 740px
+@media only screen and (max-width: 739px) {
+  .wrapper {
+    display: none;
+  }
+}
+// Tablet: width >= 740px && < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  .wrapper {
+    display: none;
+  }
+}
+// PC: width >= 1024px
+@media only screen and (min-width: 1024px) {
+}

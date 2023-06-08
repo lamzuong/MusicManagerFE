@@ -1,0 +1,150 @@
+@import '../../SCSS/modalform';
+
+.wrapper {
+  transition: all 0.2s ease-in-out;
+  min-height: 500px;
+  margin-bottom: 200px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  .wrapper-page {
+    display: flex;
+    align-items: center;
+    .txt-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .combobox {
+      color: black;
+      margin-left: 20px;
+    }
+  }
+}
+.view-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 40px;
+  font-weight: 700;
+  border-bottom: 0.5px solid rgb(100, 81, 136);
+  -webkit-user-select: none;
+
+  .title-right {
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+  }
+  .title-with-sort {
+    display: flex;
+    flex-direction: row;
+  }
+  .title-name {
+    cursor: pointer;
+  }
+  .title-genre {
+    @extend .title-name;
+  }
+  .sort-up-down {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+    .icon {
+      margin: -7px 0;
+      cursor: pointer;
+    }
+  }
+}
+.couldnt-find {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(190, 183, 183);
+  text-align: center;
+  margin-top: 15%;
+}
+.wrapper-button {
+  display: flex;
+  cursor: pointer;
+}
+.button-add {
+  display: flex;
+  align-items: center;
+  background-color: #2a213a;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  .icon-button {
+    font-size: 18px;
+    color: white;
+  }
+  .txt-button {
+    margin-left: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: lighten(#2a213a, 10%);
+  }
+  &:active {
+    background-color: lighten(#2a213a, 20%);
+  }
+}
+.button-delete {
+  @extend .button-add;
+  background-color: rgb(209, 32, 32);
+  &:hover {
+    background-color: lighten(rgb(209, 32, 32), 10%);
+  }
+  &:active {
+    background-color: lighten(rgb(209, 32, 32), 20%);
+  }
+}
+.button-disable {
+  @extend .button-add;
+  background-color: rgb(233, 97, 97);
+  &:hover {
+    background-color: rgb(233, 97, 97);
+  }
+  &:active {
+    background-color: rgb(233, 97, 97);
+  }
+  cursor: default;
+}
+
+// Mobile: width < 740px
+@media only screen and (max-width: 739px) {
+  .txt-button {
+    display: none;
+  }
+  .title-name {
+    width: max-content;
+  }
+  .title-genre {
+    display: none;
+  }
+  .modal-view {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -250px;
+  }
+}
+// Tablet: width >= 740px && < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  // .wrapper {
+  // margin-bottom: 0px;
+  // }
+}
+// PC: width >= 1024px
+@media only screen and (min-width: 1024px) {
+}

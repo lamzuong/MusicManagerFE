@@ -1,0 +1,61 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+
+  color: white;
+  background-color: #130c1c;
+}
+.body {
+  display: flex;
+
+  .content {
+    width: 100%;
+  }
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.06);
+}
+html *::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// Mobile: width < 740px
+@media only screen and (max-width: 739px) {
+  .content {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  .content {
+    height: 90vh;
+  }
+  @media screen and (max-height: 739px) {
+    .content {
+      height: 190vh;
+    }
+  }
+  @media screen and (height: 600px) {
+    .content {
+      height: 120vh;
+    }
+  }
+}
+// PC: width >= 1024px
+@media only screen and (min-width: 1024px) {
+}

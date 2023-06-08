@@ -1,0 +1,151 @@
+@import '../../SCSS/modalform';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(61, 40, 65, 0.459);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  .icon-on-image {
+    display: none;
+  }
+
+  &:hover {
+    background-color: lighten(#130c1c, 10%);
+  }
+}
+.wrapper-active {
+  @extend .wrapper;
+  background-color: lighten(#130c1c, 10%);
+}
+.wrapper-song {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  .number {
+    color: grey;
+    width: 30px;
+    font-weight: 600;
+  }
+}
+.song-image {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.wrapper-name-artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+
+  .song-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .song-artist {
+    font-size: 14px;
+    color: grey;
+  }
+}
+.wrapper-actions {
+  display: flex;
+  align-items: center;
+
+  .action-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+  }
+}
+.icon {
+  margin-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.icon-remove {
+  @extend .icon;
+  margin-right: 40px;
+}
+.checkbox {
+  @extend .icon;
+  font-size: 18px;
+  margin-top: -2px;
+}
+.modal-view {
+  margin-top: 5%;
+  width: 450px;
+}
+.confirm-view {
+  @extend .modal-view;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .view-button {
+      display: flex;
+      justify-content: center;
+
+      .button {
+        margin: 0 5px;
+      }
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+.song-genre {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  // background-color: red;
+}
+.song-genre-mg {
+  @extend .song-genre;
+  margin-right: 5px;
+}
+
+// Mobile: width < 740px
+@media only screen and (max-width: 739px) {
+  .wrapper {
+    width: 100vw;
+  }
+  .number {
+    min-width: 30px;
+  }
+  .song-genre {
+    display: none;
+  }
+  .modal-view {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -250px;
+  }
+}
+// Tablet: width >= 740px && < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+}
+// PC: width >= 1024px
+@media only screen and (min-width: 1024px) {
+}

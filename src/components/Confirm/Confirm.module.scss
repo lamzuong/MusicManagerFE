@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .view-button {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      margin: 0 5px;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+.view-spinner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}

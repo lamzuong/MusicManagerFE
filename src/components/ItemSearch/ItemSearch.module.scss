@@ -1,0 +1,58 @@
+.item-search {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 39vw;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#34224f, 10%);
+    border-radius: 10px;
+
+    .icon-more {
+      display: block;
+    }
+  }
+
+  .image-song {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+  }
+  .info-song {
+    padding-left: 10px;
+    .name-song {
+      font-weight: 600;
+    }
+    .artist-song {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.596);
+    }
+  }
+  .icon-more {
+    display: none;
+    padding-right: 5px;
+  }
+}
+.menu-options {
+  padding: 15px 20px;
+  background-color: #34224f;
+  position: absolute;
+  right: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+
+  .action {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    .title {
+      font-weight: 600;
+    }
+  }
+  .icon {
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
